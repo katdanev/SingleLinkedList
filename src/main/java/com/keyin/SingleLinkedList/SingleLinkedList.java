@@ -1,6 +1,4 @@
-package com.keyin;
-
-import java.util.LinkedList;
+package com.keyin.SingleLinkedList;
 
 
 public class SingleLinkedList {
