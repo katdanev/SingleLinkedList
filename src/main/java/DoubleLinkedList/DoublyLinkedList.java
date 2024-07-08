@@ -27,20 +27,20 @@ public class DoublyLinkedList {
 public void insertDLL (int nodeValue, int location) {
     DoublyNode newNode = new DoublyNode();
     newNode.value = nodeValue;
-    if (head == null) {
+    if (head == null) { // create a list
         createDLL(nodeValue);
         return;
-    } else if (location == 0) {
+    } else if (location == 0) { // if list is empty, put into head
         newNode.next = head;
         newNode.prev = null;
         head.prev = tail;
         head = newNode;
-    } else if (location >= size) {
+    } else if (location >= size) { // put an element in the tail
         newNode.next = null;
         tail.next = newNode;
         newNode.prev = tail;
         tail = newNode;
-    } else {
+    } else { // in particular place
         DoublyNode tempNode = head;
         int index = 0;
         while (index < location - 1) ;
@@ -110,10 +110,10 @@ public void insertDLL (int nodeValue, int location) {
 
     // Delete node
     public void deleteNodeDLL(int location) {
-        if (head == null) {
+        if (head == null) { // if list does not exist
             System.out.println("DLL does not exist");
             return;
-        } else if (location == 0) {
+        } else if (location == 0) { // delete from the head
             if (size == 1) {
                 head = tail = null;
                 size--;
